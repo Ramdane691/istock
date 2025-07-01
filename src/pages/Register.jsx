@@ -61,7 +61,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch("https://istock-backend-p2uc.onrender.com", {
+      const response = await fetch("https://istock-backend-p2uc.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
