@@ -34,7 +34,7 @@ function AjouterArticle() {
     const employerId = user.employer_id;
 
     try {
-      const response = await fetch("http://localhost:5000/add-product", {
+      const response = await fetch("https://istock-backend-p2uc.onrender.com/add-product", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

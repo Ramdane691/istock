@@ -13,7 +13,7 @@ function Article() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const response = await fetch(`http://localhost:5000/articles?entreprise_id=${user.entreprise_id}`);
+      const response = await fetch(`https://istock-backend-p2uc.onrender.com/articles?entreprise_id=${user.entreprise_id}`);
       const data = await response.json();
       setArticles(data);
     };
@@ -29,7 +29,7 @@ function Article() {
 
   const handleSave = async (idp) => {
     const nouvelleQte = parseInt(qteModifs[idp], 10);
-    const response = await fetch("http://localhost:5000/update-quantity", {
+    const response = await fetch("https://istock-backend-p2uc.onrender.com/update-quantity", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

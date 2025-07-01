@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     const fetchStats = async () => {
-      const response = await fetch(`http://localhost:5000/stats?entreprise_id=${user.entreprise_id}`);
+      const response = await fetch(`https://istock-backend-p2uc.onrender.com/stats?entreprise_id=${user.entreprise_id}`);
       const data = await response.json();
       setStats(data);
     };

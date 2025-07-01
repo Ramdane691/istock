@@ -26,7 +26,7 @@ function Employer() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   const fetchEmployes = async () => {
-    const response = await fetch(`http://localhost:5000/employes?entreprise_id=${user.entreprise_id}`);
+    const response = await fetch(`https://istock-backend-p2uc.onrender.com/employes?entreprise_id=${user.entreprise_id}`);
     const data = await response.json();
     setEmployes(data);
   };
@@ -38,7 +38,7 @@ function Employer() {
   const handleDelete = async (ide) => {
     if (!window.confirm("Supprimer cet employé ?")) return;
 
-    const response = await fetch(`http://localhost:5000/delete-employe/${ide}`, {
+    const response = await fetch(`https://istock-backend-p2uc.onrender.com/delete-employe/${ide}`, {
       method: "DELETE"
     });
 
@@ -61,7 +61,7 @@ function Employer() {
   };
 
   const handleUpdate = async () => {
-    const response = await fetch("http://localhost:5000/update-employe", {
+    const response = await fetch("https://istock-backend-p2uc.onrender.com/update-employe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(editEmploye)

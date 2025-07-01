@@ -37,7 +37,7 @@ function AjouterEmploye() {
     const entrepriseId = user.entreprise_id;
 
     try {
-      const response = await fetch("http://localhost:5000/add-employee", {
+      const response = await fetch("https://istock-backend-p2uc.onrender.com/add-employee", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
